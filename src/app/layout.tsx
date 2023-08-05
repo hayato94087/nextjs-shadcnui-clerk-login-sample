@@ -1,5 +1,6 @@
 import { ClerkProvider } from "@clerk/nextjs";
-import '@/styles/globals.css'
+import "@/styles/globals.css";
+import { Toaster } from "@/components/ui/toaster";
 
 export const metadata = {
   title: "Create Next App",
@@ -13,11 +14,12 @@ export default function RootLayout({
 }) {
   return (
     <ClerkProvider>
-
-    <html lang="ja">
-      <body className="">{children}</body>
-    </html>
+      <html lang="ja">
+        <body className="">
+          {children}
+          <Toaster />
+        </body>
+      </html>
     </ClerkProvider>
-
   );
 }
